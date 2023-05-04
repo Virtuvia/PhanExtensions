@@ -45,7 +45,8 @@ class SymfonyAnnotationVisitor extends AnnotationVisitor
       'Annotation',
       'Target',
       'Required',
-      'SuppressWarnings'
+      'SuppressWarnings',
+      'TODO',
   ];
 }
 
