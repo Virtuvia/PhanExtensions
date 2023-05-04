@@ -91,7 +91,7 @@ abstract class AnnotationVisitor extends PluginAwarePostAnalysisVisitor
     preg_match_all(self::annotation_regex, $docComment, $matches);
     foreach ($matches[1] as $annotation) {
       // Check for exceptions
-      if (in_array($annotation, $this->exceptions)) continue;
+      if (in_array(strtolower($annotation), array_map('strtolower', $this->exceptions))) continue;
 
       // Annotation should start with upper case letter
       if (!$this->starts_with_upper($annotation)) continue;
